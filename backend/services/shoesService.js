@@ -4,3 +4,5 @@ const getShoes = async () => {
     console.log('Service: getShoes');
     return await shoesRepository.getShoes();
 }
+
+module.exports.getShoes = getShoes;
