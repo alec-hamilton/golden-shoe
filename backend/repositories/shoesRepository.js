@@ -6,7 +6,14 @@ dbService.connectToDb().then((db) => shoesDbConnection = db);
 
 const getShoes = async () => {
     console.log('Repository: getShoes');
-    return await shoesDbConnection.query('SELECT * FROM products;');
+
+    const sqlQuery = 'SELECT `products`.`id`, `brands`.`brand`, `products`.`model`, `products`.`price`, `products`.`image_name`, `products`.`stock`'
+                    + 'FROM `products`'
+                    + 'INNER JOIN `brands`'
+                    + 'ON `products`.`brand` = `brands`.`id`'
+                    + ';';
+
+    return await shoesDbConnection.query(sqlQuery);
 }
 
 const getShoe = async (id) => {
