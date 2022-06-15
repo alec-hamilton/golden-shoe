@@ -1,12 +1,16 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Shoes from './Components/Shoes';
+import Navbar from './Components/Navbar';
 
 function App() {
     return (
+        <>
+        <Navbar />
         <div className="container-fluid px-sm-5">
-            <h1 className="mb-3">Golden Shoe</h1>
-            <Countries />
+            <Shoes />
         </div>
+        </>
     );
 }
 
