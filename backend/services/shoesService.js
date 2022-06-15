@@ -5,4 +5,10 @@ const getShoes = async () => {
     return await shoesRepository.getShoes();
 }
 
+const getShoe = async (id) => {
+    console.log('Service: getShoe ' + id);
+    return await shoesRepository.getShoe(id);
+}
+
 module.exports.getShoes = getShoes;
+module.exports.getShoe = getShoe;
