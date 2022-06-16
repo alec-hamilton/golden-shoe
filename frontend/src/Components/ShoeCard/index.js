@@ -1,26 +1,21 @@
 import OrderButton from "../OrderButton";
+import './ShoeCard.css';
 
 const ShoeCard = ({shoeItems}) => {
 
     return (
-        <div className="card h-100 ">
-            <div className="card-header">
-                <h5 className="card-title">{shoeItems.brand}</h5>
+        <div className="shoe-container">
+            <div className="shoe-image-container">
+                <img src={`../../../images/${shoeItems.image_name}`} alt=""/>
             </div>
-            <div className="card-body">
-                <img src={`../../../images/${shoeItems.image_name}`} className="img-fluid border" alt=""/>
+            <div className="shoe-brand">
+                <h5 className="shoe-title">{shoeItems.brand}</h5>
             </div>
-            <ul className="list-group">
-                <li className="list-group-item">
-                    <strong>Model:</strong> {shoeItems.model}
-                </li>
-                <li className="list-group-item">
-                    <strong>Price:</strong> {shoeItems.price}
-                </li>
+            <ul className="model-price-list">
+                <li>{shoeItems.model}</li>
+                <li>£{shoeItems.price}</li>
             </ul>
-            <div className="card-footer">
-                <OrderButton shoeItems={shoeItems}/>
-            </div>
+            <OrderButton shoeItems={shoeItems}/>
         </div>
     );
 }

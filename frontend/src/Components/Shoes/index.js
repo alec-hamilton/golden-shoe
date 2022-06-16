@@ -29,7 +29,7 @@ const Shoes = () => {
         <div className="row">
             {shoeItems.map((shoeItems, index) => {
                     return (
-                        <div className="col-6 col-sm-4 mb-3 col-md-3 col-lg-2" key={index}>
+                        <div className="" key={index}>
                             <ShoeCard shoeItems={shoeItems} />
                         </div>
                     );

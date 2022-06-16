@@ -11,7 +11,7 @@ const OrderButton = ({shoeItems}) => {
     }
 
     return (
-        <button className="btn btn-success" {...isDisabled}>Add to cart</button>
+        <button className="" {...isDisabled}>Add to cart</button>
     );
 }
 

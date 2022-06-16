@@ -1,0 +1,13 @@
+.shoe-container {
+    border: none;
+    border-radius: 0;
+}
+
+.shoe-image-container {
+    padding: 0;
+    border: none;
+}
+
+.shoe-title {
+    font-weight: 800;
+}
