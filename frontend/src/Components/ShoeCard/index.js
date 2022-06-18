@@ -1,22 +1,22 @@
 import OrderButton from "../OrderButton";
 import ShoeImage from "../ShoeImage";
 
-const ShoeCard = ({shoeItems}) => {
+const ShoeCard = ({shoeItem}) => {
 
     return (
-        <div className="shoe-container">
-            <a href={`/products/${shoeItems.id}`}>
-                <ShoeImage shoeItems={shoeItems}/>
+        <>
+            <a href={`/products/${shoeItem.id}`}>
+                <ShoeImage shoeItems={shoeItem}/>
             </a>
             <div className="shoe-brand">
-                <h5 className="shoe-title">{shoeItems.brand}</h5>
+                <h5 className="shoe-title">{shoeItem.brand}</h5>
             </div>
             <ul className="model-price-list">
-                <li>{shoeItems.model}</li>
-                <li>£{shoeItems.price}</li>
+                <li>{shoeItem.model}</li>
+                <li>£{shoeItem.price}</li>
             </ul>
-            <OrderButton shoeItems={shoeItems}/>
-        </div>
+            <OrderButton shoeItem={shoeItem}/>
+        </>
     );
 }
 

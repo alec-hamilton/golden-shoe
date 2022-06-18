@@ -2,12 +2,13 @@ import ShoeCard from '../ShoeCard';
 
 const Shoes = ({shoeItems}) => {
 
-
     return (
         <div className="container">
-            {shoeItems.map((shoeItems, index) => {
+            {shoeItems.map((shoeItem, index) => {
                     return (
-                        <ShoeCard shoeItems={shoeItems} key={index}/>
+                        <div className="shoe-container" key={index}>
+                            <ShoeCard shoeItem={shoeItem} />
+                        </div>
                     );
                 }
             )}

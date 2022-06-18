@@ -1,17 +1,15 @@
-let disabled;
+const OrderButton = ({shoeItem}) => {
 
-const OrderButton = ({shoeItems}) => {
+    let disabled = '';
 
-    let isDisabled = {disabled};
-
-    if (shoeItems.stock !== 0) {
-        disabled = '';
-    } else {
+    if (!shoeItem.stock) {
         disabled = 'disabled';
     }
 
+    let isDisabled = {disabled};
+
     return (
-        <button className="" {...isDisabled}>Add to cart</button>
+        <button {...isDisabled}>Add to cart</button>
     );
 }
 
