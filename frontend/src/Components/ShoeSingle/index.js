@@ -27,24 +27,32 @@ const ShoeSingle = () => {
                 .catch((e) => {
                     console.log(e.message);
                 })
-        }, []
+        },[]
     );
 
     return (
-        <>
-        <div>
-            <img src={`../../../images/${shoeItem[0].image_name}`} alt="" />
+        <div className="single-shoe-container">
+            {shoeItem.map((item, index) => {
+                return (
+                    <div key={index}>
+                        <div>
+                            <img src={`../../../images/${item.image_name}`} alt="" />
+                        </div>
+                        <div className="shoe-brand">
+                            <h5 className="shoe-title">{item.brand}</h5>
+                        </div>
+                        <ul className="model-price-list">
+                            <li>{item.model}</li>
+                            <li>£{item.price}</li>
+                        </ul>
+                        {/*<OrderButton item={item}/>*/}
+                        <h1>{productId}</h1>
+                    </div>
+
+                );
+            })}
+
         </div>
-        <div className="shoe-brand">
-            <h5 className="shoe-title">{shoeItem[0].brand}</h5>
-        </div>
-        <ul className="model-price-list">
-            <li>{shoeItem[0].model}</li>
-            <li>£{shoeItem[0].price}</li>
-        </ul>
-        <OrderButton shoeItem={shoeItem}/>
-        <h1>{productId}</h1>
-        </>
     );
 }
 
