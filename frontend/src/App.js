@@ -5,6 +5,9 @@ import Navbar from './Components/Navbar';
 import Jumbo from "./Components/Jumbo";
 import ShoeSingle from './Components/ShoeSingle';
 import {Route, Switch} from "react-router-dom";
+import Delivery from "./Components/Delivery";
+import Returns from "./Components/Returns";
+import BottomNav from "./Components/BottomNav";
 
 function App() {
 
@@ -42,7 +45,14 @@ function App() {
             <Route path={`/products/:productId`}>
                 <ShoeSingle shoeItems={shoeItems} />
             </Route>
+            <Route path='/delivery'>
+                <Delivery />
+            </Route>
+            <Route path='/returns'>
+                <Returns />
+            </Route>
         </Switch>
+        <BottomNav />
         </>
     );
 }
