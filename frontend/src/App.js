@@ -4,8 +4,7 @@ import Shoes from './Components/Shoes';
 import Navbar from './Components/Navbar';
 import Jumbo from "./Components/Jumbo";
 import ShoeSingle from './Components/ShoeSingle';
-import Route from "react-router-dom/es/Route";
-import Switch from "react-router-dom/es/Switch";
+import {Route, Switch} from "react-router-dom";
 
 function App() {
 
@@ -22,7 +21,7 @@ function App() {
     }
 
     useEffect(() => {
-            fetchData()         // when the data from fetchData() comes back, put it into countryItems.
+            fetchData()
                 .then((shoeData) => {
                     setShoeItems(shoeData);
                 })
@@ -38,10 +37,10 @@ function App() {
         <Switch>
             <Route exact path='/'>
                 <Jumbo />
-                <Shoes shoeItems={shoeItems}/>
+                <Shoes shoeItems={shoeItems} />
             </Route>
             <Route path={`/products/:productId`}>
-                <ShoeSingle />
+                <ShoeSingle shoeItems={shoeItems} />
             </Route>
         </Switch>
         </>

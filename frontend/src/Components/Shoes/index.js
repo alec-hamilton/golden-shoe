@@ -1,4 +1,3 @@
-import {useEffect, useState} from 'react';
 import ShoeCard from '../ShoeCard';
 
 const Shoes = ({shoeItems}) => {
@@ -8,7 +7,7 @@ const Shoes = ({shoeItems}) => {
         <div className="container">
             {shoeItems.map((shoeItems, index) => {
                     return (
-                            <ShoeCard shoeItems={shoeItems} key={index}/>
+                        <ShoeCard shoeItems={shoeItems} key={index}/>
                     );
                 }
             )}
