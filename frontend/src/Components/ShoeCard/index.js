@@ -1,12 +1,13 @@
 import OrderButton from "../OrderButton";
+import Switch from "react-router-dom/es/Switch";
+import Route from "react-router-dom/es/Route";
+import ShoeImage from "../ShoeImage";
 
 const ShoeCard = ({shoeItems}) => {
 
     return (
         <div className="shoe-container">
-            <div className="shoe-image-container">
-                <img src={`../../../images/${shoeItems.image_name}`} alt=""/>
-            </div>
+                    <ShoeImage shoeItems={shoeItems}/>
             <div className="shoe-brand">
                 <h5 className="shoe-title">{shoeItems.brand}</h5>
             </div>

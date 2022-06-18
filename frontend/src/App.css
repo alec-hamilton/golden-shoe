@@ -18,10 +18,32 @@
   padding: 0;
   border: none;
   font-size: 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.shoe-image-container img {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.shoe-image-container:hover .overlay {
+  opacity: 50%;
+}
+
+.overlay {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  opacity: 0;
+  transition: 0.3s;
+  background-color: #d29334;
 }
 
 .shoe-title {
   font-weight: 800;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
 }
 
 .container {
@@ -34,7 +56,8 @@ img {
   height: auto;
 }
 
-ul {
+.model-price-list {
+  margin: 0.5rem 0;
   padding: 0;
 }
 
@@ -61,14 +84,40 @@ ul > li {
   padding: 0 0.8rem;
 }
 
+.jumbo-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.jumbo-text-container {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jumbo-text {
+  background-color: #ffffff80;
+}
+
+.jumbo-text p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 .jumbo-container img {
   max-inline-size: 100%;
   block-size: auto;
   aspect-ratio: 1.5/1;
   object-fit: cover;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
-
-
 
 @media only screen and (min-width: 680px) {
 
@@ -133,7 +182,7 @@ ul > li {
 }
 
 @media only screen and (min-width: 1500px) {
-  
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
