@@ -61,7 +61,17 @@ ul > li {
   padding: 0 0.8rem;
 }
 
+.jumbo-container img {
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 1.5/1;
+  object-fit: cover;
+}
+
+
+
 @media only screen and (min-width: 680px) {
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -76,9 +86,14 @@ ul > li {
     padding-top: 0;
   }
 
+  .jumbo-container img {
+    aspect-ratio: 2/1;
+  }
+
 }
 
 @media only screen and (min-width: 1050px) {
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -96,6 +111,7 @@ ul > li {
 }
 
 @media only screen and (min-width: 1400px) {
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -110,9 +126,14 @@ ul > li {
     padding-top: 0;
   }
 
+  .jumbo-container img {
+    aspect-ratio: 2.5/1;
+  }
+
 }
 
 @media only screen and (min-width: 1500px) {
+  
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

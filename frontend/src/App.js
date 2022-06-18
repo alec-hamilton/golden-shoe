@@ -1,12 +1,13 @@
 import './App.css';
 import Shoes from './Components/Shoes';
 import Navbar from './Components/Navbar';
+import Jumbo from "./Components/Jumbo";
 
 function App() {
     return (
         <>
-        <Jumbo />
         <Navbar />
+        <Jumbo />
         <Shoes />
         </>
     );
