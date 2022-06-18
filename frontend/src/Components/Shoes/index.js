@@ -26,12 +26,10 @@ const Shoes = () => {
     );
 
     return (
-        <div className="row">
+        <div className="container">
             {shoeItems.map((shoeItems, index) => {
                     return (
-                        <div className="" key={index}>
-                            <ShoeCard shoeItems={shoeItems} />
-                        </div>
+                            <ShoeCard shoeItems={shoeItems} key={index}/>
                     );
                 }
             )}

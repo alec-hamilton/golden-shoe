@@ -1,5 +1,4 @@
 import OrderButton from "../OrderButton";
-import './ShoeCard.css';
 
 const ShoeCard = ({shoeItems}) => {
 
