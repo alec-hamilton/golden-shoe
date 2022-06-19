@@ -22,7 +22,6 @@ const ShoeSingle = ({setCartQuantity}) => {
             fetchData()
                 .then((shoeData) => {
                     setShoeItem(shoeData);
-                    console.log(shoeItem);
                 })
                 .catch((e) => {
                     console.log(e.message);
