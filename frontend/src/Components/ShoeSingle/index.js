@@ -2,7 +2,7 @@ import {useParams} from "react-router-dom";
 import OrderButton from "../OrderButton";
 import {useEffect, useState} from "react";
 
-const ShoeSingle = () => {
+const ShoeSingle = ({setCartQuantity}) => {
 
     let {productId} = useParams();
     productId = productId ? parseInt(productId) : -1;
@@ -31,27 +31,36 @@ const ShoeSingle = () => {
     );
 
     return (
-        <div className="single-shoe-container">
+        <div>
             {shoeItem.map((item, index) => {
                 return (
-                    <div key={index}>
-                        <div>
+                    <>
+                    <div key={index} className="single-shoe-container">
+                        <div className="single-shoe-image">
                             <img src={`../../../images/${item.image_name}`} alt="" />
                         </div>
-                        <div className="shoe-brand">
-                            <h5 className="shoe-title">{item.brand}</h5>
+                        <div className="single-shoe-details">
+                            <div className="shoe-brand">
+                                <h5 className="shoe-title">{item.brand}</h5>
+                            </div>
+                            <ul className="model-price-list">
+                                <li>{item.model}</li>
+                                <li>£{item.price}</li>
+                            </ul>
+                            <OrderButton item={item} setCartQuantity={setCartQuantity}/>
                         </div>
-                        <ul className="model-price-list">
-                            <li>{item.model}</li>
-                            <li>£{item.price}</li>
-                        </ul>
-                        {/*<OrderButton item={item}/>*/}
-                        <h1>{productId}</h1>
                     </div>
-
+                    <p className="single-shoe-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+                    corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in
+                    culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et
+                    expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                    quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+                    quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+                    molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+                    maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                    </>
                 );
             })}
-
         </div>
     );
 }

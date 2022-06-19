@@ -93,11 +93,13 @@ button:disabled {
 button:disabled:hover {
   background-color: #ffffff;
   color: #1010104D;
+  cursor: default;
 }
 
 button:hover {
   background-color: var(--orange);
   color: #ffffff;
+  cursor: pointer;
 }
 
 ul > li {
@@ -208,6 +210,15 @@ ul > li {
   margin: 0 3rem;
 }
 
+.single-shoe-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-shoe-text {
+  margin: 2rem 1rem;
+}
+
 @media only screen and (min-width: 680px) {
 
   .container {
@@ -228,6 +239,10 @@ ul > li {
     aspect-ratio: 2/1;
   }
 
+  .delivery {
+    margin: 2rem 6rem;
+  }
+
 }
 
 @media only screen and (min-width: 1050px) {
@@ -244,6 +259,22 @@ ul > li {
   .shoe-container {
     width: auto;
     padding-top: 0;
+  }
+
+  .single-shoe-container {
+    flex-direction: row;
+  }
+
+  .single-shoe-details {
+    margin: 2rem;
+  }
+
+  .delivery {
+    margin: 3rem 10rem;
+  }
+
+  .single-shoe-text {
+    margin: 2rem 4rem;
   }
 
 }

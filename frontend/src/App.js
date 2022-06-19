@@ -12,6 +12,7 @@ import BottomNav from "./Components/BottomNav";
 function App() {
 
     const [shoeItems, setShoeItems] = useState([]);
+    const [cartQuantity, setCartQuantity] = useState(0);
 
     const fetchData = async () => {
         const response = await fetch('http://localhost:3001/shoes');
@@ -36,14 +37,14 @@ function App() {
 
     return (
         <>
-        <Navbar />
+        <Navbar cartQuantity={cartQuantity} />
         <Switch>
             <Route exact path='/'>
                 <Jumbo />
                 <Shoes shoeItems={shoeItems} />
             </Route>
             <Route path={`/products/:productId`}>
-                <ShoeSingle shoeItems={shoeItems} />
+                <ShoeSingle shoeItems={shoeItems} setCartQuantity={setCartQuantity} />
             </Route>
             <Route path='/delivery'>
                 <Delivery />

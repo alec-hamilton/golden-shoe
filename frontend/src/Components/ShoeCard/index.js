@@ -1,5 +1,5 @@
-import OrderButton from "../OrderButton";
 import ShoeImage from "../ShoeImage";
+import ViewDetailButton from "../ViewDetailButton";
 
 const ShoeCard = ({shoeItem}) => {
 
@@ -15,7 +15,7 @@ const ShoeCard = ({shoeItem}) => {
                 <li>{shoeItem.model}</li>
                 <li>£{shoeItem.price}</li>
             </ul>
-            <OrderButton shoeItem={shoeItem}/>
+            <ViewDetailButton shoeItem={shoeItem}/>
         </>
     );
 }

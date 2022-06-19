@@ -4,7 +4,6 @@ const BottomNav = () => {
             <ul className="bottom-nav-links">
                 <a href="/delivery"><li>Delivery</li></a>
                 <a href="/returns"><li>Returns</li></a>
-                <a href="#"><li>Cart</li></a>
             </ul>
         </nav>
     );

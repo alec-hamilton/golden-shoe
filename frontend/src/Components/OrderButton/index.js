@@ -1,15 +1,21 @@
-const OrderButton = ({shoeItem}) => {
+const OrderButton = ({item, setCartQuantity}) => {
+
+    const addToCart = () => {
+        setCartQuantity((prevClickCount) => {
+            return prevClickCount + 1;
+        });
+    }
 
     let disabled = '';
 
-    if (!shoeItem.stock) {
+    if (!item.stock) {
         disabled = 'disabled';
     }
 
     let isDisabled = {disabled};
 
     return (
-        <button {...isDisabled}>Add to cart</button>
+        <button {...isDisabled} onClick={addToCart}>Add to cart</button>
     );
 }
 
