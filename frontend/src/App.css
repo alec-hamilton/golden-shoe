@@ -17,8 +17,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 85vw;
-  padding-top: 1.5rem;
-  margin: 0 auto;
+  padding-top: 0;
+  margin: 1.5rem auto 0 auto;
   box-shadow: 0 3px 5px #00000005;
   background-color: #ffffff;
 }
@@ -106,14 +106,63 @@ ul > li {
   list-style: none;
 }
 
-.logo {
+.logo-link {
   padding-left: 1rem;
+  text-decoration: none;
+  list-style: none;
+  color: var(--orange);
+  transition: 0.3s;
+}
+
+.logo-link:hover {
+  color: #000000;
+}
+
+.top-nav-container {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 3px 5px #00000015;
+  align-items: center;
+  background-color: #ffffff;
 }
 
 .top-nav {
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 3px 5px #00000015;
+}
+
+.mobile-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-navigation ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 3px solid var(--orange);
+  padding: 1rem 1rem;
+}
+
+.mobile-navigation ul li {
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+}
+
+.normal-navigation {
+  display: none;
+}
+
+.hamburger {
+  size: 80px;
+  color: #000000;
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
 }
 
 .top-nav a {
@@ -129,7 +178,6 @@ ul > li {
 
 .top-nav-links {
   display: flex;
-  align-items: center;
   padding: 0 1rem;
 }
 
@@ -224,10 +272,10 @@ ul > li {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1.2rem;
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 0;
     width: 85vw;
     margin: 0 auto;
-    padding-top: 1.2rem;
   }
 
   .shoe-container {
@@ -243,6 +291,14 @@ ul > li {
     margin: 2rem 6rem;
   }
 
+  .mobile-navigation {
+    display: none;
+  }
+
+  .normal-navigation {
+    display: block;
+  }
+
 }
 
 @media only screen and (min-width: 1050px) {
@@ -250,7 +306,6 @@ ul > li {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1.2rem;
     width: 85vw;
     margin: 0 auto;
     padding-top: 1.2rem;
@@ -284,7 +339,6 @@ ul > li {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1.2rem;
     width: 85vw;
     margin: 0 auto;
     padding-top: 1.2rem;
@@ -306,7 +360,6 @@ ul > li {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1.2rem;
     width: 1225px;
     margin: 0 auto;
   }
