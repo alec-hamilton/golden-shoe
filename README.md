@@ -15,7 +15,7 @@ git clone git@github.com:alec-hamilton/golden-shoe.git
 ### Create the Database
 2. Open a MySQL database management app (such as Sequel Ace or Sequel Pro).
 
-3. Create a database called golden-shoe with login details that match the following:
+3. Create a database called `golden-shoe` with login details that match the following:
 
 ```bash
 username: root
